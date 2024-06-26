@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
  
@@ -54,9 +55,9 @@ const Navbar = () => {
                     </div>
       
                     <div className={`lg:flex flex-col lg:flex-row ${isOpen ? 'block' : 'hidden'} lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl lg:gap-56`}>
-                        <a href="/" className="text-black  px-4 py-2 hover:text-orange-600 ">Home</a>
-                        <a href="/makeUpApp/products" className="text-black  px-4 py-2  hover:text-orange-600">Products</a>                      
-                        <a href="/contact" className="text-black  px-4 py-2  hover:text-orange-600">Contact</a>
+                        <Link to="/makeUpApp/" className="text-black  px-4 py-2 hover:text-orange-600 ">Home</Link>
+                        <Link to="/makeUpApp/products" className="text-black  px-4 py-2  hover:text-orange-600">Products</Link>                      
+                        <Link to="/contact" className="text-black  px-4 py-2  hover:text-orange-600">Contact</Link>
                     </div>
                 </div>                
             </nav>

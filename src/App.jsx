@@ -24,11 +24,11 @@ const App = () => {
     // </Router>
     <>
       <div>
-        {/* <Navbar/> */}
+        <Navbar/>
 
-        <nav>
+        {/* <nav>
           <Link to="/makeUpApp/products">Products</Link>
-        </nav>
+        </nav> */}
 
 
         <Outlet />

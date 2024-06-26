@@ -1,14 +1,15 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Products from './components/Products';
 import HomePage from './pages/HomePage';
 import ProductDetails from './components/ProductDetails';
 import ExclusiveProduct from './components/ExclusiveProduct';
+import { HashRouter as Router } from "react-router-dom";
 
 const App = () => {
   
   return (         
-    <BrowserRouter>
+    <Router>
       <div className="relative z-0">
         <div>
           <Navbar/>
@@ -20,7 +21,7 @@ const App = () => {
           <Route path="/heroProduct" element={<ExclusiveProduct />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   )
 }
 

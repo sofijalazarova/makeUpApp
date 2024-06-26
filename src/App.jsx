@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Outlet, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Outlet, Route, Routes, Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Products from './components/Products';
 import HomePage from './pages/HomePage';
@@ -24,7 +24,13 @@ const App = () => {
     // </Router>
     <>
       <div>
-        <Navbar/>
+        {/* <Navbar/> */}
+
+        <nav>
+          <Link to="/makeUpApp/products">Products</Link>
+        </nav>
+
+
         <Outlet />
       </div>
     </>

@@ -13,7 +13,7 @@ const Hero = () => {
             <h1 className='drugFont text-4xl lg:text-8xl text-center'>Maybelline</h1>
             <h1 className='heroFont text-2xl lg:text-5xl text-center'>Discover the latest in beauty innovation</h1>
             <div class="flex justify-center">
-              <button onClick={() => {navigate('/heroProduct')}} className='w-full lg:w-1/2 py-5 my-5 px-8 text-2xl text-white font-bold shadow-md shadow-primary outline bg-black'>SEE PRODUCT</button>
+              <button onClick={() => {navigate('/makeUpApp/heroProduct')}} className='w-full lg:w-1/2 py-5 my-5 px-8 text-2xl text-white font-bold shadow-md shadow-primary outline bg-black'>SEE PRODUCT</button>
             </div>
         </div>
         <div className='w-full lg:w-1/3 flex justify-center lg:justify-end'>

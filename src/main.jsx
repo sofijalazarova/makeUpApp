@@ -5,6 +5,11 @@ import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage.jsx';
 import Products from './components/Products.jsx';
+import ExclusiveProduct from './components/ExclusiveProduct.jsx';
+import ProductDetails from './components/ProductDetails.jsx';
+
+
+//<Route path="/productDetails/:id" element={<ProductDetails />} /> 
 
 const router = createBrowserRouter([
   {
@@ -18,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/makeUpApp/products",
         element: <Products/>,
+      },
+      {
+        path: "/makeUpApp/heroProduct",
+        element: <ExclusiveProduct/>,
+      },
+      {
+        path: "/makeUpApp/productDetails/:id",
+        element: <ProductDetails/>,
       },
     ]
   }

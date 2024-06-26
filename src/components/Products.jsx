@@ -58,13 +58,13 @@ const Products = () => {
                               className='h-full w-full object-cover rounded-xl border-2 border-secondary'
                               onClick={() => {
                                 console.log(id);
-                                navigate(`/productDetails/${id}`);
+                                navigate(`/makeUpApp/productDetails/${id}`);
                               }}
                 />                                    
             </div>                 
             <div className='mt-5'>
                 <h3 className='text-black font-bold text-[20px] text-center' onClick={() => {
-                        navigate(`/productDetails/${id}`);
+                        navigate(`/makeUpApp/productDetails/${id}`);
                     }}>{name}</h3>
                 </div>                          
             </div>

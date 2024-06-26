@@ -21,7 +21,7 @@ const Info = () => {
             </p>
             <button
               className="py-5 mt-5 px-8 text-2xl outline w-full text-black font-bold shadow-md shadow-primary bg-tertiary hover:bg-primary"
-              onClick={() => navigate('/products')}
+              onClick={() => navigate('/makeUpApp/products')}
             >
               SEE ALL PRODUCTS
             </button>

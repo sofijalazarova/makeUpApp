@@ -55,7 +55,7 @@ const Navbar = () => {
       
                     <div className={`lg:flex flex-col lg:flex-row ${isOpen ? 'block' : 'hidden'} lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl lg:gap-56`}>
                         <a href="/" className="text-black  px-4 py-2 hover:text-orange-600 ">Home</a>
-                        <a href="/products" className="text-black  px-4 py-2  hover:text-orange-600">Products</a>                      
+                        <a href="/makeUpApp/products" className="text-black  px-4 py-2  hover:text-orange-600">Products</a>                      
                         <a href="/contact" className="text-black  px-4 py-2  hover:text-orange-600">Contact</a>
                     </div>
                 </div>                

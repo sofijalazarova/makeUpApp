@@ -6,10 +6,11 @@ module.exports = {
     extend: {
       colors: {
         //primary: "#E8E2E2",
-        primary: "#e7b9a7",
-        secondary: "#D1B1A2",
-        tertiary: "#FBC8C7",
-        fourth: "#8f5c5b",
+        bgcolor: "#F5EEE8",
+        primary: "#D1B1A2",
+        secondary: "#DFA394",
+        headingColor: "#B17272",
+        sectioncolor: "#D1B1A2",
         "pink-100": "#E5CABE",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
@@ -20,7 +21,6 @@ module.exports = {
       screens: {
         xs: "450px",
       },
-      
     },
   },
   plugins: [],

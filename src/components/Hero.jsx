@@ -1,27 +1,39 @@
-import React from 'react';
-import Image from '../../public/lipstick-hero.png';
-import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Button from "./Button";
 
 const Hero = () => {
-
-  const navigate = useNavigate();
   return (
-    <section className={`relative w-full h-screen mx-auto content-center justify-items-center pt-40 lg:pt-24 bg-image`} >  
-      <div className='bg-white lg:mx-28 h-full lg:h-[500px] flex flex-col lg:flex-row items-center justify-center'>
-        <div className='bg-white w-full lg:w-2/3 h-full py-5 px-4 lg:px-0'>
-            <h1 className='heroFont text-5xl lg:text-9xl pt-5 text-center'>Unleash your inner artist</h1>
-            <h1 className='drugFont text-4xl lg:text-8xl text-center'>Maybelline</h1>
-            <h1 className='heroFont text-2xl lg:text-5xl text-center'>Discover the latest in beauty innovation</h1>
-            <div class="flex justify-center">
-              <button onClick={() => {navigate('/makeUpApp/heroProduct')}} className='w-full lg:w-1/2 py-5 my-5 px-8 text-2xl text-white font-bold shadow-md shadow-primary outline bg-black'>SEE PRODUCT</button>
+    <>
+      <section
+        className={`relative w-full h-screen pt-20 mx-auto content-center justify-items-center  bg-bgcolor`}
+      >
+        <div className=" lg:mx-28  lg:h-[500px] flex flex-col lg:flex-row items-center justify-center">
+          <div className="w-full h-full px-4 py-5 text-secondary lg:w-2/3 lg:px-0">
+            <h1 className="pt-5 text-5xl text-center text-headingColor heroFont lg:text-9xl">
+              Unleash your inner artist
+            </h1>
+            <h1 className="text-4xl text-center drugFont text-headingColor lg:text-8xl">
+              Maybelline
+            </h1>
+            <h1 className="text-2xl text-center heroFont text-headingColor lg:text-5xl">
+              Discover the latest in beauty innovation
+            </h1>
+            <div className="flex justify-center">
+              <Link to="products">
+                <Button>SEE ALL PRODUCTS</Button>
+              </Link>
             </div>
+          </div>
+          <div className="flex justify-center w-full lg:w-1/3 lg:justify-end">
+            <img
+              src="https://i.pinimg.com/564x/14/a7/c0/14a7c0f9ddb3dfdaa2562921bd5cadef.jpg"
+              className="object-cover "
+            />
+          </div>
         </div>
-        <div className='w-full lg:w-1/3 flex justify-center lg:justify-end'>
-            <img src={Image} className='w-full h-auto lg:h-full object-cover'/>
-        </div>
-      </div>   
-    </section>
-  )
-}
+      </section>
+    </>
+  );
+};
 
 export default Hero;

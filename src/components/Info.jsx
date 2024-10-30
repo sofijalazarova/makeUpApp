@@ -1,59 +1,76 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Image1 from '../../public/hero-img.jpg';
-import Image2 from '../../public/lips2.jpg';
-import Image3 from '../../public/image5.jpg';
+import { useNavigate } from "react-router-dom";
+import Image1 from "../../public/hero-img.jpg";
+import Image2 from "../../public/eye.png";
+import Image3 from "../../public/image5.jpg";
+import Button from "./Button";
 
 const Info = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <section className="relative w-full h-auto min-h-screen mx-auto flex justify-center items-center bg-white py-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-12 gap-10 w-full">
-          <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/3">
-            <img className="object-contain h-96 lg:h-screen py-5" src={Image1} alt="Eye Makeup" />
+      <section className="relative flex items-center justify-center w-full h-auto min-h-screen py-10 mx-auto bg-bgcolor">
+        <div className="flex flex-col items-center justify-center w-full gap-10 px-4 lg:flex-row lg:px-12">
+          <div className="flex items-center justify-center w-full lg:justify-end lg:w-1/3">
+            <img
+              className="object-contain py-5 h-96 lg:h-screen"
+              src={Image1}
+              alt="Eye Makeup"
+            />
           </div>
-          <div className="w-full lg:w-1/2 text-left text-black">
-            <img className="object-contain py-5 w-full" src={Image2} alt="Eye Makeup Products" />
-            <p className="w-full text-center lg:text-left text-[16px] lg:text-xl font-bold">
-              Make your eyes the center of attention with our collection of eye makeup. From bold eyeshadows and precise eyeliners to volumizing mascaras and defining brow products, you'll find everything you need to create any look.
+          <div className="flex flex-col items-center text-black lg:w-1/2">
+            <img
+              className="object-contain w-1/2 py-5 border-x-8"
+              src={Image2}
+              alt="Eye Makeup Products"
+            />
+            <p className="w-full text-center text-[20px] font-bold">
+              Make your eyes the center of attention with our collection of eye
+              makeup. From bold eyeshadows and precise eyeliners to volumizing
+              mascaras and defining brow products, you&apos;ll find everything
+              you need to create any look.
             </p>
-            <button
-              className="py-5 mt-5 px-8 text-2xl outline w-full text-black font-bold shadow-md shadow-primary bg-tertiary hover:bg-primary"
-              onClick={() => navigate('/makeUpApp/products')}
-            >
+            <Button onClick={() => navigate("/makeUpApp/products")}>
               SEE ALL PRODUCTS
-            </button>
+            </Button>
           </div>
         </div>
       </section>
 
-      <section className="relative w-full h-auto min-h-screen mx-auto flex justify-center items-center bg-secondary py-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center px-4 lg:px-12 gap-10 w-full">
-          <div className="w-full lg:w-1/2 text-left text-black">
-            <p className="w-full text-center lg:text-left text-[16px] font-bold lg:text-xl">
-              Indulge in the perfect pout with our extensive range of lip products. Whether you prefer a glossy finish, a matte look, or something in between, we have the perfect shade and texture for you. Our lipsticks, glosses, and liners are formulated to provide rich color, smooth application, and long-lasting wear.
+      <section className="relative flex items-center justify-center w-full h-auto min-h-screen py-10 mx-auto bg-sectioncolor">
+        <div className="flex flex-col items-center justify-center w-full gap-10 px-4 lg:flex-row lg:px-12">
+          <div className="flex flex-col items-center w-full text-black lg:w-1/2">
+            <p className="w-full text-center text-[20px] font-bold  pb-10">
+              Indulge in the perfect pout with our extensive range of lip
+              products. Whether you prefer a glossy finish, a matte look, or
+              something in between, we have the perfect shade and texture for
+              you. Our lipsticks, glosses, and liners are formulated to provide
+              rich color, smooth application, and long-lasting wear.
             </p>
-            <button className="py-5 mt-5 px-8 text-2xl outline w-full text-black font-bold shadow-md shadow-primary bg-tertiary hover:bg-primary">
-              READ MORE
-            </button>
+
+            <Button>READ MORE</Button>
           </div>
-          <div className="flex justify-center lg:justify-end items-center w-full lg:w-1/3">
-            <img className="object-contain h-96 lg:h-screen py-5" src={Image3} alt="Lip Products" />
+          <div className="flex items-center justify-center w-full lg:justify-end lg:w-1/3">
+            <img
+              className="object-contain py-5 h-96 lg:h-screen"
+              src={Image3}
+              alt="Lip Products"
+            />
           </div>
         </div>
       </section>
 
-      <section className="relative w-full h-auto min-h-screen mx-auto flex justify-center items-center bg-white py-10">
-        <div className="flex items-center justify-center px-4 lg:px-12 w-full">
-          <div className="text-left text-black my-20 text-4xl lg:text-8xl">
-            <h1 className="heroFont">"Every woman deserves a little sparkle."</h1>
+      <section className="relative flex items-center justify-center w-full h-auto min-h-screen py-10 mx-auto bg-bgcolor">
+        <div className="flex items-center justify-center w-full px-4 lg:px-12">
+          <div className="my-20 text-4xl text-center text-black lg:text-8xl">
+            <h1 className="heroFont">
+              &quot;Every woman deserves a little sparkle.&quot;
+            </h1>
           </div>
         </div>
       </section>
     </>
   );
-}
+};
 
 export default Info;

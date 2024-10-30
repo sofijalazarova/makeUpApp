@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
- 
   const [scrolled, setScrolled] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
- 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -28,39 +27,67 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`w-full flex items-center py-5 fixed top-0 z-20 bg-pink ${
-      scrolled ? "bg-white" : "bg-white"
-    }`}
-  >
-          <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:max-w-7xl lg:mx-auto">
-                    <div className="text-black text-[25px] font-bold cursor-pointer flex drugFont pl-5 mb-4 lg:mb-0 hover:cursor-pointer">Maybellline</div>
-              
-                    <div className="lg:hidden">
-                        <button onClick={toggleMenu} className="text-black focus:outline-none">
-                            <svg
-                                className="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16m-7 6h7"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-      
-                    <div className={`lg:flex flex-col lg:flex-row ${isOpen ? 'block' : 'hidden'} lg:space-x-4 lg:mt-0 mt-4 flex flex-col items-center text-xl lg:gap-56`}>
-                        <Link to="/makeUpApp/" className="text-black  px-4 py-2 hover:text-orange-600 ">Home</Link>
-                        <Link to="/makeUpApp/products" className="text-black  px-4 py-2  hover:text-orange-600">Products</Link>                      
-                        <Link to="/contact" className="text-black  px-4 py-2  hover:text-orange-600">Contact</Link>
-                    </div>
-                </div>                
-            </nav>
+      className={`w-full flex items-center py-5 fixed top-0 z-20 bg-pink ${
+        scrolled ? "bg-primary" : "bg-primary"
+      }`}
+    >
+      <div className="container flex flex-col items-center mx-auto justify-stretch lg:flex-row lg:max-w-7xl lg:mx-auto">
+        <div className="flex items-center">
+          <Link to="">
+            <div className="text-black text-[25px] font-bold cursor-pointer flex drugFont pl-5 pr-32 mb-4 lg:mb-0 hover:cursor-pointer">
+              Maybellline
+            </div>
+          </Link>
+
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-black focus:outline-none"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="primary"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`lg:flex flex-col lg:flex-row ${
+            isOpen ? "block" : "hidden"
+          } lg:space-x-0 lg:mt-0 mt-4 flex flex-col items-center text-xl lg:gap-14 `}
+        >
+          <Link
+            to="/makeUpApp/"
+            className="px-4 py-2 text-black hover:text-white "
+          >
+            Home
+          </Link>
+          <Link
+            to="/makeUpApp/products"
+            className="px-4 py-2 text-black hover:text-white"
+          >
+            Products
+          </Link>
+          <Link
+            to="/makeUpApp/"
+            className="px-4 py-2 text-black hover:text-white"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
 };
 
